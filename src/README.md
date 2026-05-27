@@ -31,6 +31,11 @@ Uma aplicação FastAPI super simples que permite aos alunos visualizar e se ins
 | ------ | ----------------------------------------------------------------- | -------------------------------------------------------------------- |
 | GET    | `/activities`                                                     | Obtém todas as atividades com detalhes e número atual de participantes |
 | POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Inscreve-se em uma atividade                                         |
+| GET    | `/announcements`                                                  | Lista anúncios ativos para exibição no cabeçalho                    |
+| GET    | `/announcements/manage?teacher_username=principal`                | Lista todos os anúncios para gerenciamento (autenticado)            |
+| POST   | `/announcements?teacher_username=principal`                       | Cria um anúncio (mensagem + data de expiração obrigatória)          |
+| PUT    | `/announcements/{announcement_id}?teacher_username=principal`     | Atualiza anúncio existente                                            |
+| DELETE | `/announcements/{announcement_id}?teacher_username=principal`     | Exclui anúncio existente                                              |
 
 ## Modelo de Dados
 
